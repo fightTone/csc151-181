@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style_0.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style_1.css')}}">
+    <title>search result</title>
+</head>
+<body class="bg">
+
+    <div>
+        <center><h1>Results</h1></center>
+        <center>
+    <table id="students">
+         <thead>
+            <th>ID no</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Middle name</th>
+            <th>Sex</th>
+            <th>Course Name</th>
+            <th>Course ID</th>
+            <th>Year Level</th>
+            <th>College</th>
+
+         </thead>
+
+         {% for row in coffee %}
+            <tr>
+
+               <td>{{row[2]}}</td>
+               <td>{{row[3]}}</td>
+               <td>{{row[4]}}</td>
+               <td>{{row[5]}}</td>
+               <td>{{row[6]}}</td>
+                <td>{{row[7]}}</td>
+                <td>{{row[0]}}</td>
+                <td>{{row[8]}}</td>
+                <td>{{row[1]}}</td>
+
+
+            </tr>
+         {% endfor %}
+      </table>
+            </center>
+    </div>
+
+    <button class="button button5" onclick="window.location.href='/search'">Back</button>
+    <button class="button button5" onclick="window.location.href='/'">Home</button>
+</body>
+</html>

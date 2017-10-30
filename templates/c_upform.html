@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style_0.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style_1.css')}}"><html>
+</head>
+<body class="bg">
+    <form action="{{url_for('up_cur')}}" method = "post">
+        <h4>Course ID: {{ copied[0]}} </h4>
+        <h4>Course Name: {{ copied[1]}} </h4>
+        <h4>College: {{ copied[2]}} </h4>
+
+        <button class="button button5" onclick="window.location.href='/'">Cancel</button>
+        <h2>Enter Changes: </h2>
+
+        <label>Course ID</label>
+        <input type="text" name="courseID" required>
+        <label>Course Name</label>
+        <input type="text" name="cname" required>
+        <label>College</label>
+        <input type="text" name= "col" required><br><br>
+
+    </form>
+
+</body>
+</html>

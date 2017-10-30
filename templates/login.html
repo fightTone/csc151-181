@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<title>Add</title>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style_0.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style_1.css')}}">
+</head>
+  <body class="bg">
+<center>
+      <h1>ADD:</h1>
+      <h3>You MUST FILL Everything Bellow</h3>
+      <form action="{{url_for('adding')}}" method = "post">
+
+          <label>ID no:</label>
+          <input type="text" name = "id_number" required>
+          <h5 >Note: id no. should be exactly 9 characters</h5>
+          <label>First name:</label>
+          <input type="text" name="firstname" required><br>
+          <label>Last name:</label>
+          <input type="text" name="lastname" required><br>
+          <label>Middle name:</label>
+          <input type="text" name= "Middle" required><br>
+          <label>Sex(M/F):</label>
+          <input type="text" name = "Sex" required><br>
+          <label>Course:</label>
+          <input type="text" name= "Course" required><br>
+          <label>Year Level(1-5):</label>
+          <input type="text" name= "Year" required><br>
+          <br><br><button class="button button5">Submit</button>
+
+      </form>
+     <br><br><button class="button button5" onclick="window.location.href='/'">Cancel</button>
+    </center>
+  </body>
+</html>
+
+
+<!--
+<form>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css')}}">
+  <h1>Year Level: !!!</h1><br>
+  <input type="radio" name="yr" value="1st" > 1st<br>
+  <input type="radio" name="yr" value="2nd"> 2nd<br>
+  <input type="radio" name="yr" value="3_gered"> 3_gered<br>
+  <input type="radio" name="yr" value="4th"> 4th<br><br>
+</form>
+
+<form>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css')}}">
+  <h1>Gender !!!</h1><br>
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other
+</form>
+
+-->

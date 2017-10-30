@@ -1,0 +1,42 @@
+<!doctype html>
+<title>Result</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style_0.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style_1.css')}}">
+<html>
+   <body class="bg">
+   <center>
+       <h2>Result: {{ msg }}</h2>
+      <div>
+
+            <table id="students">
+            <thead>
+                <th>ID no</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Middle name</th>
+                <th>Sex</th>
+                <th>Course</th>
+                <th>Year Level</th>
+            </thead>
+
+            {% for row in rows %}
+                <tr>
+                   <td>{{row["ID"]}}</td>
+                   <td>{{row["First_Name"]}}</td>
+                   <td>{{row["Last_Name"]}}</td>
+                   <td>{{row["Middle_Name"]}}</td>
+                   <td>{{row["Sex"]}}</td>
+                   <td>{{row["Course"]}}</td>
+                   <td>{{row["Yr_Lvl"]}}</td>
+
+                </tr>
+                {% endfor %}
+                </table>
+        </div>
+        <br><br><button class="button button5" onclick="window.location.href='/'">Home</button>
+
+    </center>
+
+   </body>
+</html>

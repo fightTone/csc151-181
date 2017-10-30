@@ -1,0 +1,53 @@
+
+<html>
+<head>
+    <title>Delete</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style_0.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style_1.css')}}">
+</head>
+  <body class="bg">
+  <center>
+
+      <h1>DELETE:</h1>
+
+      <form action="{{url_for('deleting')}}" method = "post">
+
+          <label>Enter ID no:</label>
+          <input type="text" name = "id_number" required>
+          <button class="button button5">Submit</button>
+          <button class="button button5" onclick="window.location.href='/'">Cancel</button>
+          <h4>You may refer from Table Below.</h4>
+
+        <div>
+            <table id="students">
+            <thead>
+                <th>ID no</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Course</th>
+            </thead>
+
+            {% for row in rows %}
+                <tr>
+                    <td>{{row["ID"]}}</td>
+                    <td>{{row["First_Name"]}}</td>
+                    <td>{{row["Last_Name"]}}</td>
+                    <td>{{row["Course"]}}</td>
+
+                </tr>
+                {% endfor %}
+                </table>
+        </div>
+
+
+
+
+      </form>
+    <br><br>
+      </center>
+  </body>
+</html>
+
+
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style_0.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style_1.css')}}">
+</head>
+<body class="bg">
+
+      <h1>DELETE</h1>
+
+      <form action="{{url_for('del_cur')}}" method = "post">
+
+          <label>Enter the Course ID</label>
+          <input type="text" name = "courseID" required>
+          <button class="button button5">Submit</button>
+
+
+      </form>
+    <br><br><button class="button button5" onclick="window.location.href='/course_mangr'">Cancel</button>
+  </body>
+</html>

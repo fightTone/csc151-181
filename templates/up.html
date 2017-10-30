@@ -1,0 +1,44 @@
+<!doctype html>
+<title>Change</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style_0.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style_1.css')}}"><html>
+   <body class="bg">
+
+      <form action="{{url_for('dating')}}" method = "post">
+          <div>
+          <h2>Student with id no. {{ copied[0]}} {{ msg}}</h2>
+          <h4>First Name: {{ copied[1]}} </h4>
+          <h4>Last Name: {{ copied[2]}} </h4>
+          <h4>Middle Name: {{ copied[3]}} </h4>
+          <h4>Sex: {{ copied[4]}} </h4>
+          <h4>Course: {{ copied[5]}} </h4>
+          <h4>Year Level: {{ copied[6]}} </h4>
+          <button class="button button5" onclick="window.location.href='/'">Cancel</button>
+
+            </div>
+
+            <h2>Enter Changes: </h2>
+          <h5>Note: do not change your id no. it will cause an error.</h5>
+          <label>ID no:</label>
+          <input type="text" name = "id_number" required><br>
+          <label>First name:</label>
+          <input type="text" name="firstname" required><br>
+          <label>Last name:</label>
+          <input type="text" name="lastname" required><br>
+          <label>Middle name:</label>
+          <input type="text" name= "Middle" required><br>
+          <label>Sex(M/F):</label>
+          <input type="text" name = "Sex" required><br>
+          <label>Course:</label>
+          <input type="text" name= "Course" required><br>
+          <label>Year Level(1-5):</label>
+          <input type="text" name= "Year" required><br>
+          <button class="button button5">Submit</button>
+
+
+      </form>
+
+
+   </body>
+</html>

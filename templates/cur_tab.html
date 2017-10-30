@@ -1,0 +1,47 @@
+<!doctype html>
+<title>Records</title>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style_0.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style_1.css')}}">
+</head>
+   <body class="bg">
+          <center>
+          <h1>Student Courses</h1>
+          </center>
+
+      <div>
+            <center>
+            <table id="students">
+            <thead>
+                <th>Course ID</th>
+                <th>Last name</th>
+                <th>First name</th>
+                <th>Course Name</th>
+                <th>Year Level</th>
+                 <th>College</th>
+            </thead>
+
+            {% for row in rows %}
+                <tr>
+                   <td>{{row["course_id"]}}</td>
+               <td>{{row["Last_Name"]}}</td>
+               <td>{{row["First_Name"]}}</td>
+               <td>{{row["c_name"]}}</td>
+                <td>{{row["Yr_Lvl"]}}</td>
+                <td>{{row["College"]}}</td>
+
+
+                </tr>
+                {% endfor %}
+                </table>
+              </center>
+        </div>
+          <center>
+        <button class="button button5" onclick="window.location.href='/list'">Back</button>
+        <button class="button button5" onclick="window.location.href='/'">Home</button>
+              </center>
+
+   </body>
+</html>
